@@ -538,7 +538,7 @@ const camerasOrthographic = (three = window.THREE) => {
       console.log('this._box.center', this._box.center);
 
       let ray = {
-        position: this._box.center,
+        position: { ...this._box.center },
         direction: direction,
       };
 
