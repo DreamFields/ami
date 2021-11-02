@@ -173,7 +173,7 @@ const widgetsRuler = (three = window.THREE) => {
 
     createMesh() {
       // geometry
-      this._geometry = new three.Geometry();
+      this._geometry = new three.BufferGeometry();
       this._geometry.vertices.push(this._handles[0].worldPosition);
       this._geometry.vertices.push(this._handles[1].worldPosition);
 

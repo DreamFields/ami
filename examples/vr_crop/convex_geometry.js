@@ -1,3 +1,8 @@
+/*
+ * @Author: linkenzone
+ * @Date: 2021-11-02 15:34:46
+ * @Descripttion: Do not edit
+ */
 /**
  * @author Mugen87 / https://github.com/Mugen87
  */
@@ -6,7 +11,7 @@
   // ConvexGeometry
 
   function ConvexGeometry(points) {
-    THREE.Geometry.call(this);
+    THREE.BufferGeometry.call(this);
 
     this.type = 'ConvexGeometry';
 
@@ -14,7 +19,7 @@
     this.mergeVertices();
   }
 
-  ConvexGeometry.prototype = Object.create(THREE.Geometry.prototype);
+  ConvexGeometry.prototype = Object.create(THREE.BufferGeometry.prototype);
   ConvexGeometry.prototype.constructor = ConvexGeometry;
 
   // ConvexBufferGeometry

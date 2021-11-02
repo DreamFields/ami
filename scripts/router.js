@@ -1,3 +1,8 @@
+/*
+ * @Author: linkenzone
+ * @Date: 2021-11-02 15:34:46
+ * @Descripttion: Do not edit
+ */
 require('shelljs/global');
 const fs = require('fs');
 
@@ -26,7 +31,7 @@ if (process.argv[2] && process.argv[3]) {
     let generateIndexFiles = '';
 
     let webpackCmd =
-      'webpack-dev-server --config webpack.config.build.js --hot --inline --progress --open --host 0.0.0.0 ' +
+      'webpack-dev-server --config webpack.config.build.js --hot --inline --progress --open --host 127.0.0.1 ' +
       buildAmi;
 
     let prodVar = '';

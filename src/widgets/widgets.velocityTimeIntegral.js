@@ -443,7 +443,7 @@ const widgetsVelocityTimeIntegral = (three = window.THREE) => {
         this.remove(this._mesh);
       }
 
-      this._geometry = new three.Geometry();
+      this._geometry = new three.BufferGeometry();
       this._handles.forEach(elem => this._geometry.vertices.push(elem.worldPosition));
       this._geometry.vertices.push(this._handles[0].worldPosition);
       this._geometry.verticesNeedUpdate = true;

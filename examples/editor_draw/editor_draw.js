@@ -422,7 +422,7 @@ window.onload = function() {
       // add mesh in this scene with right shaders...
       meshLayerMix = new THREE.Mesh(stackHelper.slice.geometry, materialLayerMix);
       // go the LPS space
-      meshLayerMix.applyMatrix(stackHelper.stack._ijk2LPS);
+      meshLayerMix.applyMatrix4(stackHelper.stack._ijk2LPS);
 
       sceneLayerMix.add(meshLayerMix);
     }
@@ -703,7 +703,7 @@ window.onload = function() {
     // add mesh in this scene with right shaders...
     meshLayer1 = new THREE.Mesh(stackHelper.slice.geometry, materialLayer1);
     // go the LPS space
-    meshLayer1.applyMatrix(stack._ijk2LPS);
+    meshLayer1.applyMatrix4(stack._ijk2LPS);
     sceneLayer1.add(meshLayer1);
 
     // Create the Mix layer
@@ -724,7 +724,7 @@ window.onload = function() {
     // add mesh in this scene with right shaders...
     meshLayerMix = new THREE.Mesh(stackHelper.slice.geometry, materialLayerMix);
     // go the LPS space
-    meshLayerMix.applyMatrix(stack._ijk2LPS);
+    meshLayerMix.applyMatrix4(stack._ijk2LPS);
     sceneLayerMix.add(meshLayerMix);
 
     //
@@ -1088,6 +1088,8 @@ window.onload = function() {
     'https://cdn.rawgit.com/FNNDSC/data/master/dicom/rsna_2/SEG/3DSlicer/tumor_User1_Manual_Trial1.dcm'
   );
 
+  console.log('files', files);
+
   // load sequence for each file
   // it loads and parses the dicom image
   let loader = new LoadersVolume(threeD);
@@ -1107,6 +1109,7 @@ window.onload = function() {
       document.body.appendChild(puppetDiv);
     })
     .catch(function(error) {
+      console.log('err', error);
       window.console.log('oops... something went wrong...');
       window.console.log(error);
     });

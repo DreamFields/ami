@@ -62,7 +62,7 @@
     "nifti-reader-js": "v0.5.3",
     "nrrd-js": "^0.2.1",
     "pako": "1.0.1",
-    "three": "latest"
+    "three": "0.99.0"
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -90,14 +90,13 @@
     "deploy": "yarn dist:clean && yarn build:clean && yarn dist:ami && yarn dist:examples && gh-pages -d dist"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
     "@types/jasmine": "^3.3.2",
     "@types/node": "^10.11.3",
     "@types/three": "^0.93.13",
-    "babel-cli": "latest",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-runtime": "^6.26.0",
+    "babel-loader": "^8.2.2",
     "compression-webpack-plugin": "^1.0.1",
     "cross-env": "^3.2.3",
     "gh-pages": "^1.2.0",

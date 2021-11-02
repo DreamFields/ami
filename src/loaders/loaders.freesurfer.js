@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 THREE.FreeSurferLoader = function() {};
 
 Object.assign(THREE.FreeSurferLoader.prototype, THREE.EventDispatcher.prototype, {
@@ -120,7 +120,7 @@ Object.assign(THREE.FreeSurferLoader.prototype, THREE.EventDispatcher.prototype,
           );
         }
 
-        geometry = new THREE.Geometry();
+        geometry = new THREE.BufferGeometry();
         for (let v = 0; v < vertCount; v++) {
           geometry.vertices.push(
             new THREE.Vector3(
@@ -164,7 +164,10 @@ Object.assign(THREE.FreeSurferLoader.prototype, THREE.EventDispatcher.prototype,
         faceCount = reader.getInt32(offset, littleEndian);
         offset += 4;
 
-        geometry = new THREE.Geometry();
+        console.log('THREE.Geometry()', THREE.BufferGeometry());
+
+        geometry = new THREE.BufferGeometry();
+
         for (let v = 0; v < vertCount; v++) {
           geometry.vertices.push(
             new THREE.Vector3(

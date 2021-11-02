@@ -1,3 +1,8 @@
+/*
+ * @Author: linkenzone
+ * @Date: 2021-11-02 15:34:46
+ * @Descripttion: Do not edit
+ */
 import { files, stlModel, colors } from './utils';
 
 // Classic ThreeJS setup
@@ -59,7 +64,7 @@ loaderSTL.load(stlModel, geometry => {
   // to LPS space
   const RASToLPS = new THREE.Matrix4();
   RASToLPS.set(-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  mesh.applyMatrix(RASToLPS);
+  mesh.applyMatrix4(RASToLPS);
   scene.add(mesh);
 });
 

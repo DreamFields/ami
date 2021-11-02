@@ -223,7 +223,10 @@ const widgetsAnnotation = (three = window.THREE) => {
       this.updateMeshColor();
 
       // line geometry
-      this._geometry = new three.Geometry();
+      this._geometry = new three.BufferGeometry();
+
+      console.log('vertices', this._geometry.vertices);
+
       this._geometry.vertices.push(this._handles[0].worldPosition);
       this._geometry.vertices.push(this._handles[1].worldPosition);
 

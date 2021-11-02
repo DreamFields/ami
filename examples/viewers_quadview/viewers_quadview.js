@@ -775,7 +775,7 @@ window.onload = function() {
             0,
             1
           );
-          object.mesh.applyMatrix(RASToLPS);
+          object.mesh.applyMatrix4(RASToLPS);
           r0.scene.add(object.mesh);
 
           object.scene = new THREE.Scene();
@@ -791,7 +791,7 @@ window.onload = function() {
           });
 
           object.meshFront = new THREE.Mesh(geometry, object.materialFront);
-          object.meshFront.applyMatrix(RASToLPS);
+          object.meshFront.applyMatrix4(RASToLPS);
           object.scene.add(object.meshFront);
 
           // back
@@ -805,7 +805,7 @@ window.onload = function() {
           });
 
           object.meshBack = new THREE.Mesh(geometry, object.materialBack);
-          object.meshBack.applyMatrix(RASToLPS);
+          object.meshBack.applyMatrix4(RASToLPS);
           object.scene.add(object.meshBack);
           sceneClip.add(object.scene);
 

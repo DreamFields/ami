@@ -373,7 +373,7 @@ const camerasOrthographic = (three = window.THREE) => {
         rotationToApply *= -1;
         this._angle += 90;
       } else {
-        rotationToApply = 360 -  (angle - this._angle);
+        rotationToApply = 360 - (angle - this._angle);
         this._angle = angle;
       }
 
@@ -522,6 +522,7 @@ const camerasOrthographic = (three = window.THREE) => {
     }
 
     _computeZoom(dimension, direction) {
+      console.log('dimension', dimension);
       if (!(dimension && dimension > 0)) {
         window.console.log('Invalid dimension provided.');
         window.console.log(dimension);
@@ -529,8 +530,15 @@ const camerasOrthographic = (three = window.THREE) => {
       }
 
       // ray
+      // let ray = {
+      //   position: this._box.center.clone(),
+      //   direction: direction,
+      // };
+
+      console.log('this._box.center', this._box.center);
+
       let ray = {
-        position: this._box.center.clone(),
+        position: this._box.center,
         direction: direction,
       };
 

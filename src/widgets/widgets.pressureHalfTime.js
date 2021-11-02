@@ -223,7 +223,7 @@ const widgetsPressureHalfTime = (three = window.THREE) => {
 
     createMesh() {
       // geometry
-      this._geometry = new three.Geometry();
+      this._geometry = new three.BufferGeometry();
       this._geometry.vertices = [this._handles[0].worldPosition, this._handles[1].worldPosition];
 
       // material

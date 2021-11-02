@@ -325,7 +325,7 @@ Object.assign(THREE.TRKLoader.prototype, THREE.EventDispatcher.prototype, {
         points: [],
         scalars: [],
         properties: [],
-        geometry: new THREE.Geometry(),
+        geometry: new THREE.BufferGeometry(),
         xProperties: {},
       };
 

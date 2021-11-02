@@ -15,7 +15,7 @@ const geometriesVoxel = (three = window.THREE) => {
 
       this._location = dataPosition;
 
-      this.applyMatrix(
+      this.applyMatrix4(
         new three.Matrix4().makeTranslation(this._location.x, this._location.y, this._location.z)
       );
 
@@ -46,7 +46,7 @@ const geometriesVoxel = (three = window.THREE) => {
       this.vertices[6].set(-0.5, -0.5, -0.5);
       this.vertices[7].set(-0.5, -0.5, +0.5);
 
-      this.applyMatrix(
+      this.applyMatrix4(
         new three.Matrix4().makeTranslation(this._location.x, this._location.y, this._location.z)
       );
 

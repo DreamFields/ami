@@ -238,7 +238,7 @@ window.onload = function() {
 
       // LINE STUFF
       const materialLine = new THREE.LineBasicMaterial();
-      const geometryLine = new THREE.Geometry();
+      const geometryLine = new THREE.BufferGeometry();
       stackHelper.slice.updateMatrixWorld();
       geometryLine.vertices.push(stackHelper.slice.position);
       geometryLine.vertices.push(particleLight.position);

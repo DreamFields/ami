@@ -188,7 +188,7 @@ function init() {
 
   // renderer
   threeD = document.getElementById('r3d');
-  renderer = new THREE.WebGLRenderer({
+  renderer = new THREE.WebGL1Renderer({
     alpha: true,
   });
   renderer.setSize(threeD.offsetWidth, threeD.offsetHeight);
