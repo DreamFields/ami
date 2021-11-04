@@ -1,5 +1,6 @@
 import { widgetsBase } from './widgets.base';
 import { widgetsHandle as widgetsHandleFactory } from './widgets.handle';
+// 双端标尺
 
 /**
  * @module widgets/biruler
